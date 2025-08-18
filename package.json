@@ -1,6 +1,6 @@
 {
-  "name": "tauri-plugin-androidtvcheck-api",
-  "version": "0.1.0",
+  "name": "tauri-plugin-android-tv-check-api",
+  "version": "1.0.0",
   "author": "setoelkahfi@gmail.com",
   "description": "",
   "type": "module",

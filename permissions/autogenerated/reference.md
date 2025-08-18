@@ -18,7 +18,7 @@ Default permissions for the plugin
 <tr>
 <td>
 
-`androidtvcheck:allow-check`
+`android-tv-check:allow-check`
 
 </td>
 <td>
@@ -31,7 +31,7 @@ Enables the check command without any pre-configured scope.
 <tr>
 <td>
 
-`androidtvcheck:deny-check`
+`android-tv-check:deny-check`
 
 </td>
 <td>

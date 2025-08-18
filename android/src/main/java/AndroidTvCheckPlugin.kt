@@ -21,7 +21,7 @@ class AndroidTvCheckPlugin(private val activity: Activity) : Plugin(activity) {
         Log.d(TAG, if (isTelevision) "Running on a TV Device" else "Running on a non-TV Device")
 
         val ret = JSObject()
-        ret.put("is_android_tv", isTelevision)
+        ret.put("isAndroidTv", isTelevision)
         invoke.resolve(ret)
     }
 }

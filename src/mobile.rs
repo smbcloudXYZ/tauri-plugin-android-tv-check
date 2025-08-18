@@ -8,6 +8,8 @@ use crate::models::*;
 
 #[cfg(target_os = "ios")]
 tauri::ios_plugin_binding!(init_plugin_android_tv_check);
+#[cfg(target_os = "android")]
+const PLUGIN_IDENTIFIER: &str = "com.plugin.androidTvCheck";
 
 // initializes the Kotlin or Swift plugin classes
 pub fn init<R: Runtime, C: DeserializeOwned>(
@@ -15,7 +17,7 @@ pub fn init<R: Runtime, C: DeserializeOwned>(
     api: PluginApi<R, C>,
 ) -> crate::Result<AndroidTvCheck<R>> {
     #[cfg(target_os = "android")]
-    let handle = api.register_android_plugin("", "AndroidTvCheckPlugin")?;
+    let handle = api.register_android_plugin(PLUGIN_IDENTIFIER, "AndroidTvCheckPlugin")?;
     #[cfg(target_os = "ios")]
     let handle = api.register_ios_plugin(init_plugin_android_tv_check)?;
     Ok(AndroidTvCheck(handle))
@@ -26,6 +28,12 @@ pub struct AndroidTvCheck<R: Runtime>(PluginHandle<R>);
 
 impl<R: Runtime> AndroidTvCheck<R> {
     pub fn check(&self) -> crate::Result<CheckResponse> {
-        self.0.run_mobile_plugin("check", ()).map_err(Into::into)
+        match self.0.run_mobile_plugin("check", ()) {
+            Ok(res) => {
+                println!("Check response: {:?}", res);
+                Ok(res)
+            }
+            Err(err) => Err(err.into()),
+        }
     }
 }
