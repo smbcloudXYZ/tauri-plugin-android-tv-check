@@ -16,7 +16,7 @@ pub struct AndroidTvCheck<R: Runtime>(AppHandle<R>);
 impl<R: Runtime> AndroidTvCheck<R> {
     pub fn check(&self) -> crate::Result<CheckResponse> {
         Ok(CheckResponse {
-            is_android_tv: true,
+            is_android_tv: false,
         })
     }
 }
