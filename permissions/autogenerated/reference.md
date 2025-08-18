@@ -4,7 +4,7 @@ Default permissions for the plugin
 
 #### This default permission set includes the following:
 
-- `allow-ping`
+- `allow-check`
 
 ## Permission Table
 
@@ -18,12 +18,12 @@ Default permissions for the plugin
 <tr>
 <td>
 
-`android-tv-check:allow-ping`
+`androidtvcheck:allow-check`
 
 </td>
 <td>
 
-Enables the ping command without any pre-configured scope.
+Enables the check command without any pre-configured scope.
 
 </td>
 </tr>
@@ -31,12 +31,12 @@ Enables the ping command without any pre-configured scope.
 <tr>
 <td>
 
-`android-tv-check:deny-ping`
+`androidtvcheck:deny-check`
 
 </td>
 <td>
 
-Denies the ping command without any pre-configured scope.
+Denies the check command without any pre-configured scope.
 
 </td>
 </tr>

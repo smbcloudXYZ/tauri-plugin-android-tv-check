@@ -14,13 +14,9 @@ pub fn init<R: Runtime, C: DeserializeOwned>(
 pub struct AndroidTvCheck<R: Runtime>(AppHandle<R>);
 
 impl<R: Runtime> AndroidTvCheck<R> {
-    pub fn ping(&self, payload: PingRequest) -> crate::Result<PingResponse> {
-        Ok(PingResponse {
-            value: payload.value,
+    pub fn check(&self) -> crate::Result<CheckResponse> {
+        Ok(CheckResponse {
+            is_android_tv: true,
         })
-    }
-
-    pub fn check(&self) -> crate::Result<bool> {
-        Ok(true)
     }
 }

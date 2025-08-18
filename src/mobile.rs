@@ -25,13 +25,7 @@ pub fn init<R: Runtime, C: DeserializeOwned>(
 pub struct AndroidTvCheck<R: Runtime>(PluginHandle<R>);
 
 impl<R: Runtime> AndroidTvCheck<R> {
-    pub fn ping(&self, payload: PingRequest) -> crate::Result<PingResponse> {
-        self.0
-            .run_mobile_plugin("ping", payload)
-            .map_err(Into::into)
-    }
-
-    pub fn check(&self) -> crate::Result<bool> {
+    pub fn check(&self) -> crate::Result<CheckResponse> {
         self.0.run_mobile_plugin("check", ()).map_err(Into::into)
     }
 }

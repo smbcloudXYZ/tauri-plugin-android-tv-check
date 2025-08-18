@@ -1,18 +1,11 @@
-use tauri::{command, AppHandle, Runtime};
-
-use crate::models::*;
-use crate::AndroidTvCheckExt;
-use crate::Result;
-
-#[command]
-pub(crate) async fn ping<R: Runtime>(
-    app: AppHandle<R>,
-    payload: PingRequest,
-) -> Result<PingResponse> {
-    app.android_tv_check().ping(payload)
-}
+use {
+    crate::models::CheckResponse,
+    crate::AndroidTvCheckExt,
+    crate::Result,
+    tauri::{command, AppHandle, Runtime},
+};
 
 #[command]
-pub(crate) async fn is_android_tv<R: Runtime>(app: AppHandle<R>) -> Result<bool> {
+pub(crate) async fn check<R: Runtime>(app: AppHandle<R>) -> Result<CheckResponse> {
     app.android_tv_check().check()
 }

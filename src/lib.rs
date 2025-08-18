@@ -34,11 +34,8 @@ impl<R: Runtime, T: Manager<R>> crate::AndroidTvCheckExt<R> for T {
 
 /// Initializes the plugin.
 pub fn init<R: Runtime>() -> TauriPlugin<R> {
-    Builder::new("android-tv-check")
-        .invoke_handler(tauri::generate_handler![
-            commands::ping,
-            commands::is_android_tv
-        ])
+    Builder::new("androidtvcheck")
+        .invoke_handler(tauri::generate_handler![commands::check])
         .setup(|app, api| {
             #[cfg(mobile)]
             let android_tv_check = mobile::init(app, api)?;
