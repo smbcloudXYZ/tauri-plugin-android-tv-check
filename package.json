@@ -1,8 +1,14 @@
 {
   "name": "@smbcloud/tauri-plugin-android-tv-check-api",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "setoelkahfi@gmail.com",
-  "description": "",
+  "description": "A Tauri plugin to check if the device is an Android TV device.",
+  "keywords": [
+    "tauri",
+    "android",
+    "tv",
+    "plugin"
+  ],
   "type": "module",
   "types": "./dist-js/index.d.ts",
   "main": "./dist-js/index.cjs",
