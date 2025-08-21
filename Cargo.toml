@@ -1,7 +1,7 @@
 [package]
 name = "tauri-plugin-android-tv-check"
 version = "1.1.1"
-authors = ["setoelkahfi@gmail.com"]
+authors = ["smbcloud@setoelkahfi.se"]
 description = "A Tauri plugin for checking Android TV devices."
 license = "MIT"
 homepage = "https://github.com/smbcloudXYZ/tauri-plugin-android-tv-check"

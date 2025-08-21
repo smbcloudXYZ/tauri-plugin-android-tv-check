@@ -1,7 +1,7 @@
 {
   "name": "@smbcloud/tauri-plugin-android-tv-check-api",
-  "version": "1.1.3",
-  "author": "setoelkahfi@gmail.com",
+  "version": "1.1.4",
+  "author": "smbcloud@setoelkahfi.se",
   "description": "A Tauri plugin to check if the device is an Android TV device.",
   "license": "MIT",
   "homepage": "https://github.com/smbcloudXYZ/tauri-plugin-android-tv-check",
