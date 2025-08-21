@@ -1,13 +1,25 @@
 {
   "name": "@smbcloud/tauri-plugin-android-tv-check-api",
-  "version": "1.1.2",
-  "author": "setoelkahfi@gmail.com",
+  "version": "1.1.4",
+  "author": "smbcloud@setoelkahfi.se",
   "description": "A Tauri plugin to check if the device is an Android TV device.",
+  "license": "MIT",
+  "homepage": "https://github.com/smbcloudXYZ/tauri-plugin-android-tv-check",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smbcloudXYZ/tauri-plugin-android-tv-check.git"
+  },
+  "bugs": {
+    "url": "https://github.com/smbcloudXYZ/tauri-plugin-android-tv-check/issues"
+  },
   "keywords": [
     "tauri",
     "android",
     "tv",
-    "plugin"
+    "plugin",
+    "android-tv",
+    "device-detection",
+    "tauri-plugin"
   ],
   "type": "module",
   "types": "./dist-js/index.d.ts",
@@ -20,7 +32,8 @@
   },
   "files": [
     "dist-js",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "rollup -c",

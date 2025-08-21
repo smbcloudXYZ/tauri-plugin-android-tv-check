@@ -1,2 +1,10 @@
 /build
 /.tauri
+.gradle/
+local.properties
+*.iml
+.externalNativeBuild
+.cxx
+captures/
+.navigation/
+outputs/
